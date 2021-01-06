@@ -27,13 +27,15 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+// homemade plugins
+import initLetters from "../plugins/init_letters";
+import initDiapo from "../plugins/init_diapo";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initLetters();
+  initDiapo();
 });
 
-// homemade plugins
-import initLetters from "../plugins/init_letters";
 
-initLetters();
