@@ -22,10 +22,8 @@
           <div class="avatar-image">
             <%= image_tag "catalonia.png", alt: "EN ATTENDANT LA PHOTO DE MARIEN" %>
           </div>
-          <h4 id="bioTitle">Mi nombre es Marién Garcia, soy de Barcelona.</h4>
-          <p id="bioContent">
-            <br>Empecé a practicar Hatha Yoga a los veintitres años pero lo dejé y volví unos años más tarde pues sentía mucha inestabilidad en mi vida, había perdido el rumbo. La maternidad y el trabajo me consumían, sentía momentos de mucha angustia, no estaba bien ni física, ni mentalmente ; tenía que hacer un cambio e intuí que el yoga me ayudaría.<br><br>Poco a poco retomé la práctica y sentí que necesitaba practicar dos e incluso tres días por sema-na, esas clases me aportaban una serenidad y calma especial, mi luz volvía a brillar y el amor asomaba de nuevo…mi amor propio, la confianza en mi misma y en la vida.<br><br>En el 2015 me formé como profesora de Hatha Yoga en Yoga Studio Barcelona con Xavier Solà y Pilar Ruberte y eso me llevó a sumergirme durante dos años en un autoestudio y práctica cons-tantes, indagando, estudiando, practicando a diario y disfrutando del proceso de constante trans-formación que la práctica me regalaba.<br>Sentí una transformación importante a nivel físico, mental y emocional. Fue un antes y un después y entendí que <em>el Yoga no es más que el camino a la transformación. Pues en la vida el cambio es constante e inminente y necesitamos transformarnos contínuamente para poder avanzar y dar paso a lo nue-vo. pues lo viejo, atrás se queda.</em><br><br>Cuando terminé la formación seguí practicando, estudiando y aprendiendo de manera autodidacta y estos últimos años he asistido a diferentes formaciones y seminarios con profesores maravillo-sos como Tomás Zorzo, Danilo Hernández, Micheline Flak, Angelo Cecci, Susana Castro, etc <br>Todas esas enseñanzas de estilos y enfoques distintos me han ayudado a integrar la esencia del yoga tradicional en mi vida y poderlo transmitir en las clases.<br><br>Mis clases son generalmente en español pero también imparto clases en catalán y francés.
-          </p>
+          <h4><%= t :bioTitle %></h4>
+          <p><%= t :bioContent_html %></p>
         </div>
       </div>
     </div>
@@ -40,21 +38,20 @@
         <!-- </div> -->
         <div class="card-student">
           <div class="avatar-large card-img-a"></div>
-          <div class="text" id="student1">
-            <p><em>La práctica de Hatha Yoga con Marién me ha aportado una forma de entender y practicar el yoga de una manera más versátil, puedo conectar y trabajar cada asana y sentir como responde mi cuerpo en cada movimiento. Así como tomar consciencia de mi respiración en cada sesión, y según voy avanzando en mi práctica día a día puedo constatar que mi cuerpo es cada vez más flexible.</em></p>
-            <p><em> - Xus</em></p>
+          <div class="text">
+            <p><%= t :student1_html %></p>
           </div>
         </div>
         <div class="card-student">
           <div class="avatar-large card-img-b"></div>
-          <div class="text" id="student2">
-            <p><em>Con mi pareja, descubrimos el Yoga Nidra gracias a Marién en 2018. Su docencia es muy agradable y su pasión se nota en cada momento. Su suavidad, cuidado y conocimiento hacen que podamos disfrutar plenamente de las clases. En cada sesión, no sólo viajamos y nos relajamos mentalmente, sino también aliviamos tensiones corporales.<br>¡Una profesora 100% recomendable!</em></p><p><em> - Estrella y Thibault</em></p>
+          <div class="text">
+            <p><%= t :student2_html %></p>
           </div>
         </div>
         <div class="card-student">
           <div class="avatar-large card-img-c"></div>
-          <div class="text" id="student3">
-            <p><em>Nuestro equipo está más que contento con las sesiones de yoga que nos imparte Marién cada semana en nuestra oficina en Barcelona. La práctica de yoga nos ayuda a estar más consciente y enfocarnos en lo que realmente nos importa, tanto a nivel personal como profesional.</em></p><p><em> - Steffen Schwörer, GlobalCAD</em></p>
+          <div class="text">
+            <p><%= t :student3_html %></p>
           </div>
         </div>
       </div>
