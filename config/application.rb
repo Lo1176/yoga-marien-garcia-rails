@@ -16,11 +16,7 @@ module YogaMarienGarciaRails
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
     # Initialize default language and path
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
-    # config/application.rb
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
-
-
     config.i18n.default_locale = :es
     # I18n.available_locales = [:fr, :ca]
 
