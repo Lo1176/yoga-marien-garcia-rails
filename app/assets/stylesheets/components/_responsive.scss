@@ -1,0 +1,52 @@
+/*responsive*/
+@media (max-width: 1018px) {
+    .moving-letters h1 {
+      font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .extended-menu {
+      display: none;
+    }
+    .navbar {
+      grid-template-columns: 16vw 48vw 16vw;
+
+    }
+    .card-info .img-hatha {
+        /*margin-left: 0;*/
+    }
+
+}
+
+@media (min-width: 768px) {
+    .card-info {
+      display: inline;
+    }
+    .burger-to-X {
+      /*display: none;*/
+    }
+
+}
+
+@media (min-width: 560px) {
+  .small-devise {
+        display: none;
+      }
+}
+
+
+@media (max-width: 560px) {
+    .small-devise {
+      display: inline-block;
+    }
+    .large-devise {
+      display: none;
+    }
+    .footer {
+      padding: 0 16px;
+    }
+    html {
+      scroll-behavior: auto !important;
+    }
+}

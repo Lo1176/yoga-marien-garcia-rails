@@ -1,0 +1,32 @@
+/*diapo*/
+.diapo{
+  position: relative;
+  overflow: hidden;
+}
+#nav-right, #nav-left{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3em;
+}
+
+#nav-right{
+    right: 20px;
+}
+#nav-left{
+    left: 20px;
+}
+.elements{
+    display: flex;
+    transition: 1s linear;
+}
+
+.element{
+    flex: 1 0 100%;
+    /*position: relative;*/
+}
+
+.element > img{
+    width: 100%;
+}
