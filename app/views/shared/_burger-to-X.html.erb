@@ -1,35 +1,41 @@
-  <!-- test burger from right -->
+<!-- burger-to-x -->
 <div id="menuToggle">
   <!--
-  A fake / hidden checkbox is used as click reciever,
-  so you can use the :checked selector on it.
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
   -->
   <input type="checkbox" />
-
   <!--
-  Some spans to act as a hamburger.
+    Some spans to act as a hamburger.
   -->
   <span></span>
   <span></span>
   <span></span>
-
-  <!--
-  Too bad the menu has to be inside of the button
-  but hey, it's pure CSS magic.
-  -->
   <ul id="menu">
     <li class="nav-item">
-      <%= link_to "Hatha Yoga / Yoga Nidra", yoga_path , class: "nav-link" %>
+      <%= link_to "Hatha Yoga", yoga_path(anchor: "hatha"), class: "nav-link" %>
+      <!-- <a href="yoga.html#hatha" class="nav-link">Hatha Yoga</a> -->
     </li>
     <li class="nav-item">
-      <%= link_to "Wellness at work", wellness_path , class: "nav-link" %>
+      <%= link_to "Yoga Nidra", yoga_path(anchor: "nidra"), class: "nav-link" %>
+      <!-- <a href="yoga.html#nidra" class="nav-link">Yoga Nidra</a> -->
     </li>
     <li class="nav-item">
-      <%= link_to "K - training", knee_path , class: "nav-link" %>
+      <%= link_to "Wellness at Work", wellness_path, class: "nav-link" %>
+      <!-- <a href="wellness.html" class="nav-link">Wellness at Work</a> -->
     </li>
     <li class="nav-item">
-      <a href="/#about-me">Bio</a>
-      <%#= link_to "Bio", root_path, id: 'about-me'%>
+      <%= link_to "K - Training", knee_path, class: "nav-link" %>
+      <!-- <a href="knee.html" class="nav-link">K - Training</a> -->
+    </li>
+    <li class="nav-item">
+      <%= link_to "Bio", root_path(anchor: "bio"), class: "nav-link" %>
+      <!-- <a href="#bio" class="nav-link">Bio</a> -->
     </li>
   </ul>
+</div>
+<!-- extended-menu -->
+<div class="right-navbar extended-menu">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  </div>
 </div>

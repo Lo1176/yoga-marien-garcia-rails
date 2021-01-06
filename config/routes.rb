@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'bio', to: 'pages#bio'
+  get 'yoga', to: 'pages#yoga'
+  get 'wellness', to: 'pages#wellness'
+  get 'knee', to: 'pages#knee'
 end
