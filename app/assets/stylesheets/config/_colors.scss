@@ -1,10 +1,28 @@
 // Define variables for your color scheme
 
 // For example:
-$red: #FD1015;
-$blue: #167FFB;
-$yellow: #FFC65A;
+$red: #890620;
+$dark-red: #2C0703;
+$blue: #6d87a8;
+$dark-blue: #273043;
+$light-blue: #f8f9fa;
+$yellow: #FEF208;
+$sand: #e1c2ac;
 $orange: #E67E22;
 $green: #1EDD88;
-$gray: #0E0000;
+$gray: #545E75;
 $light-gray: #F4F4F4;
+$black: #171A21;
+$white: #FFF;
+// :root {
+//   --pink: #A34861 !important;
+//   --softest-pink: #FFFCFC !important;
+//   --soft-pink: #DA9F93 !important;
+//   --lighter-pink: #da6384 !important;
+//   --light-blue: #f8f9fa !important;
+//   --brown: #774E24 !important;
+
+// ajout
+
+$logo-color: $sand;
+$main-font-color: $dark-blue;
