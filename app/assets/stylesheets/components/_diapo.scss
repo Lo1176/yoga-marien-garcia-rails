@@ -9,7 +9,13 @@
     transform: translateY(-50%);
     color: white;
     font-size: 3em;
+    opacity: 0.3;
 }
+
+#nav-right:hover, #nav-left:hover{
+  opacity: 1;
+}
+
 
 #nav-right{
     right: 20px;
