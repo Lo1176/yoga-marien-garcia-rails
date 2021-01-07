@@ -1,5 +1,28 @@
-<h1>wellness</h1>
 <div class="container">
-
-
+  <div class="card-area">
+    <!-- hatha yoga info -->
+    <div id="hatha" class="title-line"><h3>Wellness at Work</h3></div>
+    <div class="card-info">
+      <div class="content">
+        <p><%= t :welnessContent_html %></p>
+      </div>
+      <main>
+      <div class="diapo">
+        <div class="elements">
+          <div class="element active">
+            <%= image_tag "wellness_1.jpg", alt: "wellness image 1" %>
+          </div>
+          <div class="element">
+            <%= image_tag "wellness_2.jpg", alt: "wellness image 2" %>
+          </div>
+          <div class="element">
+            <%= image_tag "wellness_3.jpg", alt: "wellness image 3" %>
+          </div>
+        </div>
+        <i id="nav-left" class="fas fa-chevron-left"></i>
+        <i id="nav-right" class="fas fa-chevron-right"></i>
+      </div>
+      </main>
+    </div>
+  </div>
 </div>
