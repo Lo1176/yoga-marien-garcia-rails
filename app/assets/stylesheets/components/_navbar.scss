@@ -64,7 +64,7 @@ body .navbar {
 }
 .navbar .dropdown img {
   max-width: 24px;
-  margin-left: 8px;
+  // margin-left: 8px;
 }
 
 #mainFlag {
@@ -81,7 +81,7 @@ body .navbar {
 }
 
 #mainFlag button {
-  padding: 0 12px 0 12px;
+  // padding: 0 12px 0 12px;
 
 }
 #mainFlag input {
@@ -90,7 +90,7 @@ body .navbar {
   height: 38px;
   position: absolute;
   top: 0px;
-  left: 0;
+  left: 12px;
   right: 0;
 
   cursor: pointer;
@@ -109,7 +109,7 @@ body .navbar {
   /*padding: 26px 32px 16px 32px;*/
   border-radius: 2px;
   padding: 8px 24px 8px 16px;
-  top: 28px;
+  top: 38px;
   left: -27px;
 
   background:$white;
