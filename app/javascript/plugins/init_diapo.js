@@ -3,7 +3,7 @@ const initDiapo = () => {
   let compteur = 0 // Compteur qui permettra de savoir sur quelle slide nous sommes
   let timer, elements, slides, slideWidth
 
-  window.onload = () => {
+  // window.onload = () => {
     // On récupère le conteneur principal du diaporama
     const diapo = document.querySelector(".diapo")
     // On récupère le conteneur de tous les éléments
@@ -33,7 +33,7 @@ const initDiapo = () => {
         slideWidth = diapo.getBoundingClientRect().width
         slideNext()
     })
-  }
+  // }
 
   /**
    * Cette fonction fait défiler le diaporama vers la droite
