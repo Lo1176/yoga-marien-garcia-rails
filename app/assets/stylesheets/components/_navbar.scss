@@ -1,11 +1,14 @@
 /*navbar*/
-body .navbar {
-  /*justify-content: space-between;*/
+.navbar {
+  // fixed navbar on top
+  position: sticky;
+  top: 0;
+  z-index: 1;
   background:$white;
-  padding: 8px 24px;
+  // padding: 8px 24px;
   display: grid !important;
   justify-content: space-between;
-  grid-template-columns: 16vw 40vw 16vw;
+  grid-template-columns: 12vw 66vw 12vw;
   grid-template-rows: 48px;
   grid-template-areas: "gauche logo droite";
 }

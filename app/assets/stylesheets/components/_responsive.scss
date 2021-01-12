@@ -1,13 +1,13 @@
 /*responsive*/ // 254
 @media (max-width: 1018px) {
     .moving-letters h1 {
-      font-size: 24px;
+      // font-size: 24px;
     }
 }
 
 @media (max-width: 768px) {
     .moving-letters h1 {
-      font-size: 18px;
+      // font-size: 18px;
     }
 }
 
@@ -43,7 +43,7 @@
 
 @media (max-width: 560px) {
   .moving-letters h1 {
-    font-size: 18px;
+    font-size: 24px;
   }
   .small-devise {
     display: inline-block;
@@ -53,6 +53,14 @@
   }
   .footer {
     padding: 0 16px;
+  }
+  body {
+      .nav-bar {
+        padding: 0.5rem 1rem;
+      }
+  }
+  .menu-wrap {
+    right: 64px;
   }
   html {
     scroll-behavior: auto !important;
