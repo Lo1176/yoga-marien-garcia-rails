@@ -5,7 +5,8 @@
   flex-wrap: wrap;
 }
 .container-student .card-student {
-  min-width: 340px;
+  width: 480px;
+  // min-width: 340px;
   /*min-height: 260px;*/
   padding: 16px;
   margin: 16px 4px 16px 4px;
@@ -45,7 +46,7 @@
 }
 
 .text {
-  width: 400px;
+  // width: 400px;
 }
 
 .text p {

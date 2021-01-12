@@ -5,7 +5,7 @@ body .navbar {
   padding: 8px 24px;
   display: grid !important;
   justify-content: space-between;
-  grid-template-columns: 32vw 21vw 32vw;
+  grid-template-columns: 16vw 40vw 16vw;
   grid-template-rows: 48px;
   grid-template-areas: "gauche logo droite";
 }
