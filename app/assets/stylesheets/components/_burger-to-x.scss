@@ -1,144 +1,158 @@
-/*burger-to-x*/
-#menuToggle {
-  display: block;
-  // position: relative;
-  // overflow: hidden;
-  // text-indent: -230px;
-
-
-
-
-
-  position: absolute;
-  /*top: 30px;*/
-  top: 15px;
-  /*right: 50px;*/
-  right: 20px;
-  z-index: 1;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
+/* CORE STYLES */
+:root {
+  --primary-color: red;
+  // --overlay-color: yellow;
+  --menu-speed: 0.75s;
 }
 
-#menuToggle input {
-  display: block;
-  width: 40px;
-  height: 36px;
+/* MENU STYLES */
+.menu-wrap {
   position: absolute;
-  top: -7px;
-  left: -5px;
+  top: 8px;
+  right: 96px;
+  z-index: 1;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
   cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background:$dark-blue;
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
-}
-
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background:$blue;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+  width: 50px;
+  height: 50px;
   opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  opacity: 1;
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top right of the screen
- */
-#menu {
+.menu-wrap .hamburger {
   position: absolute;
-  width: 300px;
-  /*width: 100vw;*/
-  padding: 16px 32px 16px 32px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  padding: 12px;
+  background: $light-sand;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 80%;
+  height: 2.5px;
   border-radius: 2px;
-  right: -20px;
-
-  background:$white;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-
-  transform-origin: 0% 0%;
-  transform: translate(100%, 0);
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  background: $dark-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
 }
 
-#menu .nav-link {
-  padding: 0;
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 140%;
+  height: 3px;
+  border-radius: 2px;
+  background: inherit;
 }
 
-#menu a:hover {
-  text-decoration: underline !important;
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
 }
 
-#menu li {
-  padding: 2px 0;
-/*font-size: 22px;*/
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
 }
 
-/*
- * And let's fade it in from the right
- */
-#menuToggle input:checked ~ ul {
-  transform: none;
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
   opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
 }
 
-@media screen and (max-width: 768px) {
-  #menu {
-    transform: none;
-    opacity: 0;
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+.menu-wrap .menu > div {
+  background: $overlay-color;
+  opacity: 0.92;
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 8px;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit !important;
+  text-decoration: none;
+  transition: color 0.4s ease;
+  &:hover {
+      text-decoration: underline;
+
+
   }
 }
+
