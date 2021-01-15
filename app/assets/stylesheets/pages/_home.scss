@@ -1,1 +1,22 @@
 // Specific CSS for your home-page
+#bio .content {
+  margin-bottom: 56px;
+
+}
+
+#teach {
+  text-align: center;
+  background-color: $blue;
+  padding: 16px 16px;
+  border-radius: 4px;
+    h2 {
+      color: $white;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    p {
+      color: $white;
+      font-weight: 300;
+    }
+}
+

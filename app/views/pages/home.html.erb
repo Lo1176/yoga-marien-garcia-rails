@@ -27,6 +27,13 @@
           <h4><%= t :bioTitle %></h4>
           <p><%= t :bioContent_html %></p>
         </div>
+        <div id="teach">
+          <div class="title-line"><h3><%= t :teachTitle %></h3></div>
+            <h2><strong><%= link_to "Hatha Yoga", yoga_path(anchor: "hatha") %></strong></h2>
+              <p><%= t :introHatha %> </p>
+            <h2><strong><%= link_to "Yoga Nidra", yoga_path(anchor: "nidra") %></strong></h2>
+                <p><%= t :introNidra %> </p>
+        </div>
       </div>
     </div>
   </div>
@@ -59,15 +66,5 @@
       </div>
 
     </div>
-  </div>
-  <!-- images presentation -->
-  <div class="container">
-    <!-- <div class="images">
-      <div class="card image-a"></div>
-      <div class="card image-b"></div>
-      <div class="card image-c"></div>
-      <div class="card image-d"></div>
-      <div class="card image-e"></div>
-    </div> -->
   </div>
 </div>

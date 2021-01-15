@@ -1,8 +1,8 @@
 /*line separation*/
 .title-line {
   z-index: 0;
-  width: 100%;
-  margin: 24px 0;
+  // width: 100%;
+  margin: 24px 4vw;
   text-align: center;
   font-size: 28px;
   position: relative;
@@ -30,4 +30,20 @@
     left: 0;
     z-index: 1;
     background:$main-font-color;
+}
+
+#teach {
+    .title-line {
+      background-color:$blue;
+        h3 {
+          background-color:$blue;
+          color: $white;
+        }
+
+
+    }
+    .title-line:after {
+      background: $white;
+    }
+
 }
