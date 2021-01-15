@@ -42,6 +42,12 @@
 
 
 @media (max-width: 560px) {
+  .card-area {
+    padding: 0;
+  }
+  .color-box {
+    margin: 0;
+  }
   .moving-letters h1 {
     font-size: 24px;
   }
