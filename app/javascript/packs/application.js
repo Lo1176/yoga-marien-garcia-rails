@@ -17,11 +17,6 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 
-// ----------------------------------------------------
-// Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
-// WRITE YOUR OWN JS STARTING FROM HERE 👇
-// ----------------------------------------------------
-
 // External imports
 import "bootstrap";
 
@@ -29,12 +24,15 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 // homemade plugins
 import initLetters from "../plugins/init_letters";
+import initNavbar from "../plugins/init_navbar"
 import initDiapo from "../plugins/init_diapo";
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initLetters();
+  initNavbar();
   initDiapo();
 });
 

@@ -2,8 +2,8 @@
 .navbar {
   // fixed navbar on top
   // position: sticky;
-  top: 0;
-  z-index: 1;
+  // top: 0;
+  // z-index: 1;
   background:$white;
   // padding: 8px 24px;
   display: grid !important;
@@ -12,6 +12,22 @@
   grid-template-rows: 48px;
   grid-template-areas: "gauche logo droite";
 }
+
+// show or hide navbar on scroll up or down
+.smart-scroll{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+.scrolled-down{
+   transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scrolled-up{
+   transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+// --------------- //
 
 .navbar .navbar-collapse {
   flex-grow: 0;
