@@ -18,13 +18,13 @@ module YogaMarienGarciaRails
     # Initialize default language and path
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.i18n.default_locale = :es
-    # I18n.available_locales = [:fr, :ca]
+    # I18n.available_locales = [:fr, :cat]
 
     # Where the I18n library should search for translation files
     # I18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')]
 
     # Permitted locales available for the application
-    # I18n.available_locales = [:es, :ca, :fr]
+    # I18n.available_locales = [:es, :cat, :fr]
 
     # Set default locale to something other than :en
     # I18n.default_locale = :es
