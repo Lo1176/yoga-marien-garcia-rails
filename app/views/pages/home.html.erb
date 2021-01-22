@@ -18,21 +18,21 @@
   <!-- bio -->
   <div id="bio">
     <div class="card-area">
-      <div class="title-line"><h3><%= t :bio %></h3></div>
+      <div class="title-line"><h3><%= t 'home.bio' %></h3></div>
       <div class="card-info">
         <div class="content">
           <div class="avatar-center">
             <%= image_tag "avatar3.jpg", alt: "Marién Garcia avatar", class: "avatar-bio"%>
           </div>
-          <h4><%= t :bioTitle %></h4>
-          <p><%= t :bioContent_html %></p>
+          <h4><%= t 'home.bioTitle' %></h4>
+          <p><%= t 'home.bioContent_html' %></p>
         </div>
         <div id="teach">
-          <div class="title-line"><h3><%= t :teachTitle %></h3></div>
+          <div class="title-line"><h3><%= t 'home.teachTitle' %></h3></div>
             <h2><strong><%= link_to "Hatha Yoga", yoga_path(anchor: "hatha") %></strong></h2>
-              <p><%= t :introHatha %> </p>
+              <p><%= t 'home.introHatha' %> </p>
             <h2><strong><%= link_to "Yoga Nidra", yoga_path(anchor: "nidra") %></strong></h2>
-                <p><%= t :introNidra %> </p>
+                <p><%= t 'home.introNidra' %> </p>
         </div>
       </div>
     </div>
@@ -48,19 +48,19 @@
         <div class="card-student">
           <div class="avatar-student card-img-a"></div>
           <div class="text">
-            <p><%= t :student1_html %></p>
+            <p><%= t 'home.student1_html' %></p>
           </div>
         </div>
         <div class="card-student">
           <div class="avatar-student card-img-b"></div>
           <div class="text">
-            <p><%= t :student2_html %></p>
+            <p><%= t 'home.student2_html' %></p>
           </div>
         </div>
         <div class="card-student">
           <div class="avatar-student card-img-c"></div>
           <div class="text">
-            <p><%= t :student3_html %></p>
+            <p><%= t 'home.student3_html' %></p>
           </div>
         </div>
       </div>
