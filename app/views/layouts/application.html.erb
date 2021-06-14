@@ -13,7 +13,12 @@
     <meta property="og:image" content="<%= meta_image %>" />
     <meta property="og:description" content="<%= meta_description %>" />
     <meta property="og:site_name" content="<%= meta_title %>" />
-
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<%= request.original_url %>">
+    <meta property="twitter:title" content="<%= meta_title %>">
+    <meta property="twitter:description" content="<%= meta_description %>">
+    <meta property="twitter:image" content="https://www.marienyoga.com/assets/meta_image-475f92e30b00e71cb70bc7e685f8b45632814fd896eecc89328ac4da9aaaa4d4.jpg">
     <%#= csrf_meta_tags %>
     <%#= csp_meta_tag %>
     <%#= action_cable_meta_tag %>
